@@ -149,6 +149,8 @@ GEM
       execjs
       railties (>= 3.2)
       tilt
+    react-rails-img (0.1.6)
+      react-rails
     redis (4.0.0)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
@@ -219,6 +221,7 @@ DEPENDENCIES
   rails (= 5.1.2)
   rails-assets-classnames!
   react-rails (~> 1.8)
+  react-rails-img
   redis
   sass-rails
   simple_form

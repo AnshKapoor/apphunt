@@ -17,6 +17,7 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'acts_as_votable'
+gem 'react-rails-img'
 
 gem 'js-routes', '~> 1.3'
 gem 'react-rails', '~> 1.8'
