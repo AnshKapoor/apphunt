@@ -1,5 +1,9 @@
 var ProductListItem = React.createClass({
   render: function() {
+    if (this.props.product.tagline != null) {
+      var tagline = " - " + this.props.product.tagline;
+    };
+
     return (
       <div className="product">
         <div className="product-upvote">
@@ -7,10 +11,7 @@ var ProductListItem = React.createClass({
         </div>
         <div className="product-body">
           <h3>
-            <p>
-              <a href={this.props.product.url} target="_blank">{this.props.product.name} </a>
-              - {this.props.product.tagline}
-            </p>
+            <p><a href={this.props.product.url} target="_blank">{this.props.product.name}</a>{tagline}</p>
           </h3>
           <p className="product-description">{this.props.product.description}</p>
         </div>

@@ -26,6 +26,11 @@
 .home-row {
   width: 100%;
 }
+.list-title {
+  // text-decoration: underline #550F93;
+  display: inline-block;
+  border-bottom: 8px solid #550F93;
+}
 .home-title {
   font-size: 70px;
   color: #550F93;
@@ -36,12 +41,13 @@
   font-size: 24px;
   color: black;
   margin-top: 0;
-  margin-bottom: 250px;
+  margin-bottom: 350px;
 }
 .home-product-list-wrapper {
   background-color: rgba(0, 0, 0, 0.5);
-  min-height: 700px;
-  margin-bottom: 500px;
+  min-height: 760px;
+  margin-bottom: 200px;
+  padding-bottom: 25px;
 }
 .home-product-list {
   width: 100%;

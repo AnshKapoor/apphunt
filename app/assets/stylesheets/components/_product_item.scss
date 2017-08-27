@@ -21,7 +21,7 @@
   margin-top: 0;
 }
 .product-body p {
-  font-weight: lighter;
+  // font-weight: lighter;
   color: white;
   margin-bottom: 0;
 }
@@ -50,17 +50,23 @@
   font-size: 13px;
   line-height: 20px;
 }
+.product-upvote:hover {
+  .product-arrow {
+    border-bottom: 10px solid white !important;
+  }
+}
 .product-count {
   margin: 2px 0 0;
+  color: white !important;
 }
 .product-arrow {
   transition: all 0.15s ease;
   width: 0;
   height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid transparent;
-  border-bottom: 9px solid black;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid transparent;
+  border-bottom: 10px solid #78BD27 !important;
   border-radius: 2px;
   margin: auto;
 }
@@ -70,7 +76,7 @@
   display: flex;
   align-items: center;
   text-align: center;
-  margin: 0px;
+  margin: 0 0 0 20px;
 }
 .product-controls a {
   padding: 0 20px;
