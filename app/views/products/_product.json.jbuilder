@@ -1,5 +1,5 @@
 # Will build the JSON file for all the product_item components
-json.extract! product, :name, :tagline, :url, :id, :image_url, :description
+json.extract! product, :name, :tagline, :url, :id, :image_url, :description, :for_sale
 
 json.user do
   json.extract! product.user, :avatar_url

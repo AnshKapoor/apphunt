@@ -13,7 +13,7 @@
         <div class="container home-product-list">
           <div class="row">
             <div class="col-xs-12">
-              <%= react_component "ProductList",
+              <%= react_component 'ForSaleList',
                 render(template: 'products/index.json.jbuilder') %>
             </div>
           </div>
@@ -22,7 +22,16 @@
       <!-- List of most upvoted apps wanted -->
       <div class="col-xs-4 col-xs-offset-2 home-product-list-wrapper">
         <h2>Hottest apps wanted</h2>
+        <div class="container home-product-list">
+          <div class="row">
+            <div class="col-xs-12">
+              <%= react_component 'WantedList',
+                render(template: 'products/index.json.jbuilder') %>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </div>
