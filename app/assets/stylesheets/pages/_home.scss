@@ -1,34 +1,49 @@
 // CSS for home page
-
-// Banner section
+.home-wrapper {
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
 .home-banner {
   // background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 50%),
   // image-url('apphunt-home.jpeg');
   background-image: linear-gradient(-225deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.0) 50%),
   image-url('apphunt-home.jpeg');
   background-position: top;
-  height: calc(100vh - 70px);
+  // height: calc(100vh - 70px);
   color: white;
   text-align: center;
-  height: 100vh;
-  width: 100%;
-  background-size: cover !important;
+  height: auto;
+  width: 100vw;
+  background-size: contain !important;
+  background-repeat: no-repeat;
   display: flex;
   position: relative;
   align-items: center;
   // justify-content: center;
   flex-direction: column;
   padding-top: 70px;
+  margin: 0;
+}
+.home-row {
+  width: 100%;
 }
 .home-title {
   font-size: 70px;
   color: #550F93;
   margin-bottom: 0;
+  font-weight: bold;
 }
 .home-tagline {
   font-size: 24px;
   color: black;
   margin-top: 0;
+  margin-bottom: 250px;
+}
+.home-product-list {
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 500px;
+  margin-bottom: 500px;
 }
 
 
