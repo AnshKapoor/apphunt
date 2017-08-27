@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get 'for_sale', to: 'products#for_sale'
   get 'wanted', to: 'products#wanted'
 
+  get '/search' => 'products#search', as: :search
+
   # get 'for-sale', to: 'products#for-sale' do
   #   member do
   #     post :upvote # /for-sale/:id/upvote

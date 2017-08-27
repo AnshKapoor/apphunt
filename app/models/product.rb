@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  searchkick text_start: ['name'], text_start: ['tagline'], text_start: ['url'], text_start: ['category']
+  searchkick text_start: ['name']
 
   belongs_to :user
   has_many :comments

@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
     # if params.has_key?(:search_value) and params[:search_value] != ""
     #   @products = Product.where(for_sale: true).product_search(params[:search_value])
     # else
-      @products = Product.where(for_sale: true)
+    #  @products = Product.where(for_sale: true)
     # end
 
     # For sorted array of product categories for products that are for sale

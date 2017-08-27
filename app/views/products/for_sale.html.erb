@@ -12,7 +12,8 @@
             <%#= submit_tag 'Search', class: 'btn my-btn for-sale-search-btn' %>
           <%# end %>
 
-
+          <%= react_component 'ProductsContainer',
+            { productsPath: products_path(:json), searchPath: search_path } %>
 
         </div>
       </div>
@@ -43,8 +44,7 @@
             <div class="col-xs-12">
               <%#= react_component 'ForSaleList',
                 render(template: 'products/index.json.jbuilder') %>
-              <%= react_component 'ProductsContainer',
-              { productsPath: products_path(:json), searchPath: for_sale_path } %>
+
 
             </div>
           </div>

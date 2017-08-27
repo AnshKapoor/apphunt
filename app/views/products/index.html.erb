@@ -2,8 +2,19 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <%= react_component "ForSaleList",
+      <%#= react_component "ForSaleList",
         render(template: 'products/index.json.jbuilder') %>
+
+      <p id="notice"><%= notice %></p>
+
+      <h1>Listing Songs</h1>
+
+      <%= react_component "ProductsContainer", { productsPath: products_path(:json), searchPath: search_path } %>
+      <%#= link_to 'New Song', new_song_path %>
+
     </div>
   </div>
 </div>
+
+
+
