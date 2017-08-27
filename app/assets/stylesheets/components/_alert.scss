@@ -4,8 +4,16 @@
 
 .alert {
   margin: 0;
+  display: flex;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
   text-align: center;
+  justify-content: center;
   color: white;
+  z-index: 15;
+  border: none;
 }
 .alert-info {
   background: $green;
@@ -13,3 +21,7 @@
 .alert-warning {
   background: $red;
 }
+button .close {
+  margin-right: auto;
+}
+

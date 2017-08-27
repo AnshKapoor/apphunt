@@ -5,8 +5,6 @@
   padding: 0;
 }
 .home-banner {
-  // background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 50%),
-  // image-url('apphunt-home.jpeg');
   background-image: linear-gradient(-225deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.0) 50%),
   image-url('apphunt-home.jpeg');
   background-position: top;
@@ -40,12 +38,14 @@
   margin-top: 0;
   margin-bottom: 250px;
 }
-.home-product-list {
+.home-product-list-wrapper {
   background-color: rgba(0, 0, 0, 0.5);
-  min-height: 500px;
+  min-height: 700px;
   margin-bottom: 500px;
 }
-
+.home-product-list {
+  width: 100%;
+}
 
 
 

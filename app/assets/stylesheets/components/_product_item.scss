@@ -13,6 +13,7 @@
 /* Body design */
 .product-body {
   flex: 1 1 auto;
+  text-align: left;
 }
 .product-body h3 {
   font-weight: bold;
@@ -21,8 +22,16 @@
 }
 .product-body p {
   font-weight: lighter;
-  color: #999999;
+  color: white;
   margin-bottom: 0;
+}
+.product-body a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.product-description {
+  font-size: 15px !important;
 }
 
 /* Product image */
@@ -80,7 +89,7 @@
 
 /* Hover effects */
 .product:hover {
-  background: #f7f7fa;
+  background: rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }
 .product-upvote:hover, .product-upvote.product-upvote-upvoted {

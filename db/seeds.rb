@@ -13,6 +13,7 @@ puts 'Creating products...'
 inline_app = Product.create!(
   name: 'InLine',
   tagline: 'Never wait in line again',
+  description: 'Full-featured RESTful web app powered by Ruby on Rails, JavaScript, PostgreSQL, ActionCable and Twitter Bootstrap…',
   url: 'http://inline-app.com',
   user: charlie,
   image_url: 'inline-home-page.png'
@@ -21,6 +22,7 @@ inline_app = Product.create!(
 tunebook_app = Product.create!(
   name: 'Tunebook',
   tagline: 'Your one-stop-shop for discovering new music',
+  description: 'Full-featured RESTful web app powered by Node.js, Express.js, MongoDB, Angular2…',
   url: 'http://tunebook.herokuapp.com',
   user: charlie,
   image_url: 'tunebook-home-page.png'
@@ -29,6 +31,7 @@ tunebook_app = Product.create!(
 unify_app = Product.create!(
   name: 'Unify',
   tagline: "Don't miss out on valuable connections",
+  description: 'Full-featured RESTful web app powered by Ruby on Rails, JavaScript and PostgreSQL…',
   url: 'http://uni-fy.eu',
   user: charlie,
   image_url: 'unify-home-page-normal.png'
