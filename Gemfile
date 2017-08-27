@@ -21,6 +21,7 @@ gem 'react-rails-img'
 
 gem 'js-routes', '~> 1.3'
 gem 'react-rails', '~> 1.8'
+gem 'searchkick'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-classnames'

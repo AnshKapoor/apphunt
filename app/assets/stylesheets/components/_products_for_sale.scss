@@ -1,0 +1,78 @@
+// CSS for for-sale products page
+.for-sale-wrapper {
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.for-sale-banner {
+  background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 50%),
+  image-url('apphunt-rocket.jpg');
+  background-position: top;
+  background-attachment: fixed;
+  // height: calc(100vh - 70px);
+  color: white;
+  text-align: center;
+  height: auto;
+  width: 100vw;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  display: flex;
+  position: relative;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+  padding-top: 70px;
+  margin: 0;
+}
+.for-sale-row {
+  width: 100%;
+  height: auto;
+}
+.for-sale-title {
+  font-size: 70px;
+  color: white;
+  margin-bottom: 0;
+  margin-top: 80px;
+  font-weight: bold;
+}
+
+// For sale search bar
+.for-sale-search {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 100px;
+}
+.for-sale-search-btn {
+  margin-left: 5px;
+  border: 0;
+  background-color: $purple;
+}
+.for-sale-search-btn:hover {
+  border: 0;
+}
+.for-sale-search-input {
+  width: 570px;
+  transition: all 0.15s ease;
+  line-height: 40px;
+  font-weight: lighter;
+  color: #666666;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 14px;
+  outline: none;
+}
+.for-sale-search-input:focus  {
+  border: 1px solid #CCCCCC;
+}
+
+// Category wrapper
+.category-list li {
+  color: $purple;
+  text-align: left;
+}
+.category-list li p {
+  color: white;
+}
