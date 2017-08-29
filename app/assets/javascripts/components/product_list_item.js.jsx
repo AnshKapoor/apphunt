@@ -20,9 +20,6 @@ var ProductListItem = React.createClass({
             <div className="user-badge-container ">
               <Img src={this.props.product.user.avatar_url} className="avatar"/>
             </div>
-            {/* <div className="user-badge-container ">
-              <Img src={this.props.product.image_url} className="avatar"/>
-            </div> */}
           </div>
         </div>
       </div>

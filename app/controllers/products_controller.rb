@@ -1,6 +1,12 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
+
+    # Try to return products search results as an array instead of rendering them to the browser
+    # Pseudo code: @products = Product.search(params[:query]).template(''../views/products/index.json.jbuilder'').to_a
+
+    # @users = User.all
+    # @users_json = render_to_string( template: 'users.json.jbuilder', locals: { users: @users})
   end
 
   def show
@@ -19,8 +25,10 @@ class ProductsController < ApplicationController
 
   def search
     @products = Product.search(params[:query])
-    if request.xhr?
-      render :json => @products.to_json
+    if request.xhr? # i.e. "if AJAX request"
+      render @products
+      # render :json => @products.to_json
+      # render(template: '../views/products/index.json.jbuilder')
     else
       render :index
     end

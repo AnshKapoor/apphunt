@@ -36,23 +36,23 @@
   font-weight: bold;
 }
 
-// For sale search bar
-.for-sale-search {
+// Product search bar
+.product-search {
   width: auto;
   display: flex;
   justify-content: center;
   position: relative;
   margin-bottom: 100px;
 }
-.for-sale-search-btn {
+.product-search-btn {
   margin-left: 5px;
   border: 0;
   background-color: $purple;
 }
-.for-sale-search-btn:hover {
+.product-search-btn:hover {
   border: 0;
 }
-.for-sale-search-input {
+.product-search-input {
   width: 570px;
   transition: all 0.15s ease;
   line-height: 40px;
@@ -64,7 +64,7 @@
   font-size: 14px;
   outline: none;
 }
-.for-sale-search-input:focus  {
+.product-search-input:focus  {
   border: 1px solid #CCCCCC;
 }
 

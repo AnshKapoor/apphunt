@@ -1,9 +1,9 @@
 class Product < ApplicationRecord
-  searchkick text_start: ['name']
-
   belongs_to :user
   has_many :comments
   acts_as_votable
+
+  searchkick
 
   # Search bar config
   # include PgSearch

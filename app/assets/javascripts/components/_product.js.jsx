@@ -1,10 +1,12 @@
 var Product = React.createClass({
   render () {
+    console.log(this.props);
     return (
       <div>
-        <h4>{ this.props.name } </h4>
-        <p>{ this.props.tagline }</p>
-        <p>{ this.props.category }</p>
+        <p>{ this.props.product.name }</p>
+        <p>{ this.props.product.tagline }</p>
+        <p>{ this.props.product.description }</p>
+        <p>{ this.props.product.url }</p>
       </div>
     )
   }

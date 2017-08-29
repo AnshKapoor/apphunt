@@ -7,9 +7,9 @@
 
         <!-- For-sale products search form-->
         <div>
-          <%#= form_tag('/products', method: 'get',  class: 'for-sale-search' ) do  %>
-            <%#= text_field_tag :search_value, params[:search_value], placeholder: 'Find your dream app' , class: "for-sale-search-input" %>
-            <%#= submit_tag 'Search', class: 'btn my-btn for-sale-search-btn' %>
+          <%#= form_tag('/products', method: 'get',  class: 'product-search' ) do  %>
+            <%#= text_field_tag :search_value, params[:search_value], placeholder: 'Find your dream app' , class: "product-search-input" %>
+            <%#= submit_tag 'Search', class: 'btn my-btn product-search-btn' %>
           <%# end %>
 
           <%= react_component 'ProductsContainer',
