@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   has_many :comments
   acts_as_votable
 
-  searchkick
+  searchkick word_start: [:name]
 
   # Search bar config
   # include PgSearch

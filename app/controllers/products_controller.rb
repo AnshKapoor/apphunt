@@ -11,6 +11,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    render(template: '../views/products/index.json.jbuilder', locals: {products: @products})
   end
 
   def upvote
@@ -26,9 +27,9 @@ class ProductsController < ApplicationController
   def search
     @products = Product.search(params[:query])
     if request.xhr? # i.e. "if AJAX request"
-      render @products
+      # render json: @products
       # render :json => @products.to_json
-      # render(template: '../views/products/index.json.jbuilder')
+      render(template: '../views/products/index.json.jbuilder', locals: {products: @products})
     else
       render :index
     end

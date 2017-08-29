@@ -9,7 +9,7 @@ var ProductsContainer = React.createClass({
       url: this.props.productsPath,
       dataType: 'json',
       success: function(data) {
-        console.log(data);
+        {/* console.log(data); */}
         this.setState({products: data});
       }.bind(this),
       error: function(data) {
@@ -25,7 +25,8 @@ var ProductsContainer = React.createClass({
         url: this.props.searchPath+"?query="+event.target.value,
         dataType: 'json',
         success: function(data) {
-          console.log(data);
+          {/* console.log(data); */}
+          {/* console.log(data); */}
           this.setState({products: data});
         }.bind(this),
         error: function(data) {
@@ -40,17 +41,19 @@ var ProductsContainer = React.createClass({
   },
 
   getInitialState() {
-    return { products: [] };
+    return { products: ["no products loaded yet"] };
   },
 
   render() {
+
+    console.log(this.state.products);
 
     return (
       <div>
         {/* For rendering search form */}
         <ProductsSearch searchPath={this.props.searchPath} submitPath={this.searchProducts} cancelPath={this.fetchProducts}/>
         {/* For rendering products */}
-        <Products products={this.state.products}/>
+        {/* <Products products={this.state.products}/> */}
       </div>
     );
 
