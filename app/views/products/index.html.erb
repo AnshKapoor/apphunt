@@ -1,20 +1,3 @@
-<!-- The "bridge" between the Rails app and the React components -->
-<div class="container" style="padding-top: 70px;">
-  <div class="row">
-    <div class="col-xs-12">
 
-      <p id="notice"><%= notice %></p>
-      <!-- Render ProductsContainer react component and pass it two props: -->
-      <!--    productsPath to render all product objects when you first arrive on the /products page (passed as JSON) -->
-      <!--    searchPath to render only the queried product objects when you search for something (also passed as JSON) -->
-      <%#= react_component "ProductsContainer", { productsPath: products_path(:json), searchPath: search_path } %>
-
-      <!-- Render ProductsContainer react component and pass it the jbuilder-created product JSON objects with avatar_url and upvote properties -->
-      <%= react_component "ProductsContainer", { productsPath: products_path(:json), searchPath: search_path(:json) } %>
-
-    </div>
-  </div>
-</div>
-
-
-
+<%= react_component "ProductsContainer",
+  { productsPath: products_path, searchPath: search_path, products: @products } %>

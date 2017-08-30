@@ -10,7 +10,7 @@ var ProductsContainer = React.createClass({
       dataType: 'json',
       success: function(data) {
         {/* console.log(data); */}
-        this.setState({products: data});
+        this.setState({products: data.products});
       }.bind(this),
       error: function(data) {
         this.setState({products: []});
@@ -26,8 +26,7 @@ var ProductsContainer = React.createClass({
         dataType: 'json',
         success: function(data) {
           {/* console.log(data); */}
-          {/* console.log(data); */}
-          this.setState({products: data});
+          this.setState({products: data.products});
         }.bind(this),
         error: function(data) {
           this.setState({products: []});
@@ -41,21 +40,50 @@ var ProductsContainer = React.createClass({
   },
 
   getInitialState() {
-    return { products: ["no products loaded yet"] };
+    return { products: [] };
   },
 
-  render() {
-
-    console.log(this.state.products);
+  render: function() {
 
     return (
-      <div>
-        {/* For rendering search form */}
-        <ProductsSearch searchPath={this.props.searchPath} submitPath={this.searchProducts} cancelPath={this.fetchProducts}/>
-        {/* For rendering products */}
-        {/* <Products products={this.state.products}/> */}
-      </div>
-    );
 
+      <div className="container for-sale-wrapper">
+        <div className="for-sale-banner">
+          {/* Search bar */}
+          <div className="row for-sale-row">
+            <div className="col-xs-12">
+              <h1 className="for-sale-title">Thinking about building an app?</h1>
+              <h3>What if someone already did the job for you...</h3>
+              <div>
+
+                {/* Rendering search form */}
+                <ProductsSearch searchPath={ this.props.searchPath } submitPath={ this.searchProducts }/>
+
+              </div>
+            </div>
+          </div>
+
+          <div className="row home-row">
+            {/* List of product categories */}
+            <Categories products={ this.props.products }/>
+            {/* List of search results --> */}
+            <div className="col-xs-7 col-xs-offset-1 home-product-list-wrapper">
+              <h2 className="list-title">Hottest apps for sale right now</h2>
+              <div className="container home-product-list">
+                <div className="row">
+                  <div className="col-xs-12">
+
+                    {/* Rendering search results */}
+                    <ProductList products={ this.state.products }/>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    );
   }
-});
+})

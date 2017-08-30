@@ -2,16 +2,19 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
 
-    # Try to return products search results as an array instead of rendering them to the browser
-    # Pseudo code: @products = Product.search(params[:query]).template(''../views/products/index.json.jbuilder'').to_a
+    @categories_array = []
+    @products.each do |product|
+      unless @categories_array.include?(product.category)
+        @categories_array << product.category
+      end
+    end
 
-    # @users = User.all
-    # @users_json = render_to_string( template: 'users.json.jbuilder', locals: { users: @users})
+    @categories = @categories_array.to_json
   end
 
   def show
     @product = Product.find(params[:id])
-    render(template: '../views/products/index.json.jbuilder', locals: {products: @products})
+    # render(template: '../views/products/index.json.jbuilder', locals: {products: @products.to_json})
   end
 
   def upvote
@@ -27,9 +30,9 @@ class ProductsController < ApplicationController
   def search
     @products = Product.search(params[:query])
     if request.xhr? # i.e. "if AJAX request"
-      # render json: @products
+      @products
       # render :json => @products.to_json
-      render(template: '../views/products/index.json.jbuilder', locals: {products: @products})
+      # render(template: '../views/products/index.json.jbuilder', :json => @products)
     else
       render :index
     end
