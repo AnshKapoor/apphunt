@@ -57,7 +57,7 @@ var ProductsContainer = React.createClass({
               <div>
 
                 {/* Rendering search form */}
-                <ProductsSearch searchPath={ this.props.searchPath } submitPath={ this.searchProducts }/>
+                <ProductsSearch searchPath={this.props.searchPath} submitPath={this.searchProducts}/>
 
               </div>
             </div>
@@ -65,7 +65,7 @@ var ProductsContainer = React.createClass({
 
           <div className="row home-row">
             {/* List of product categories */}
-            <Categories products={ this.props.products }/>
+            <Categories products={this.props.products}/>
             {/* List of search results --> */}
             <div className="col-xs-7 col-xs-offset-1 home-product-list-wrapper">
               <h2 className="list-title">Hottest apps for sale right now</h2>
@@ -74,7 +74,7 @@ var ProductsContainer = React.createClass({
                   <div className="col-xs-12">
 
                     {/* Rendering search results */}
-                    <ProductList products={ this.state.products }/>
+                    <ProductList products={this.state.products}/>
 
                   </div>
                 </div>

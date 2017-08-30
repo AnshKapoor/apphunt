@@ -7,7 +7,10 @@ var ProductListItem = React.createClass({
     return (
       <div className="product">
         <div className="product-upvote">
-          <Upvote product={this.props.product} />
+          <Upvote product={this.props.product}/>
+        </div>
+        <div className="show-comments">
+          <CommentList product={this.props.product}/>
         </div>
         <div className="product-body">
           <h3>
