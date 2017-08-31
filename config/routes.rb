@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
 
   root to: 'pages#home'
@@ -6,11 +7,15 @@ Rails.application.routes.draw do
   resources :products do
     member do
       post :upvote  # /products/:id/upvote
+      # post :post_comment
     end
   end
 
-  get 'for_sale', to: 'products#for_sale'
-  get 'wanted', to: 'products#wanted'
+  get 'comments', to: 'comments#index'
+  get 'post_comment', to: 'comments#create'
+
+  # get 'for_sale', to: 'products#for_sale'
+  # get 'wanted', to: 'products#wanted'
 
   get '/search' => 'products#search' do
     member do
@@ -18,16 +23,4 @@ Rails.application.routes.draw do
     end
   end
 
-
-  # get 'for-sale', to: 'products#for-sale' do
-  #   member do
-  #     post :upvote # /for-sale/:id/upvote
-  #   end
-  # end
-
-  # get 'wanted', to: 'products#wanted' do
-  #   member do
-  #     post :upvote # /wanted/:id/upvote
-  #   end
-  # end
 end

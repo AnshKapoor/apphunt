@@ -209,4 +209,28 @@ Comment.create(
   content: "Sorry man I already sold it :("
 )
 
+
+Comment.create(
+  user_id: User.where(first_name: "Donald").first.id,
+  product_id: Product.where(name: "App that helps me recruit soldiers to fight the white walkers").first.id,
+  content: "Hey Jon good luck with creating an app, you're like living in midieval times"
+)
+Comment.create(
+  user_id: User.where(first_name: "Jon").first.id,
+  product_id: Product.where(name: "App that helps me recruit soldiers to fight the white walkers").first.id,
+  content: "Donald stop being a hater"
+)
+
+
+Comment.create(
+  user_id: User.where(first_name: "Elon").first.id,
+  product_id: Product.where(name: "US/Mexico firewall").first.id,
+  content: "Donald you suck"
+)
+Comment.create(
+  user_id: User.where(first_name: "Donald").first.id,
+  product_id: Product.where(name: "US/Mexico firewall").first.id,
+  content: "Lalalala I can't hear you"
+)
+
 puts 'Finished!'

@@ -4,6 +4,10 @@ var ProductListItem = React.createClass({
       var tagline = " - " + this.props.product.tagline;
     };
 
+    if (this.props.product.comments.length > 1) {
+      var commentListComponent = <CommentList comments={this.props.product.comments} />;
+    };
+
     return (
       <div>
         <div className="product">
@@ -31,15 +35,11 @@ var ProductListItem = React.createClass({
             </div>
           </div>
         </div>
-
-        <div className="comments-container">
-          <h3>Comments</h3>
-          {this.props.product.comments.map(function(comment){
-            console.log(comment);
-            return <Comment comment={comment} key={comment.id} />;
-          })}
+        <div>
+          {commentListComponent}
         </div>
       </div>
     );
-  }
+  },
+
 });

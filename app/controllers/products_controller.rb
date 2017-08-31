@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+
   def index
     @products = Product.all
 
@@ -19,16 +20,6 @@ class ProductsController < ApplicationController
     # render(template: '../views/products/index.json.jbuilder', locals: {products: @products.to_json})
   end
 
-  def upvote
-    @product = Product.find(params[:id])
-    if current_user.voted_for? @product
-      current_user.unvote_for @product
-    else
-      current_user.up_votes @product
-    end
-  end
-
-
   def search
     @products = Product.search(params[:query])
     if request.xhr? # i.e. "if AJAX request"
@@ -38,11 +29,24 @@ class ProductsController < ApplicationController
     else
       render :index
     end
+  end
 
+  def upvote
+    @product = Product.find(params[:id])
+    if current_user.voted_for? @product
+      current_user.unvote_for @product
+    else
+      current_user.up_votes @product
+    end
+  end
+
+  def post_comment
+    @comment = Comment.new(user_id: params[:user.id], product_id: params[:product.id], content: params[:content])
   end
 
 
-  def for_sale
+
+  # def for_sale
     # For search function for products that are for sale
     # if params.has_key?(:search_value) and params[:search_value] != ""
     #   @products = Product.where(for_sale: true).product_search(params[:search_value])
@@ -51,17 +55,17 @@ class ProductsController < ApplicationController
     # end
 
     # For sorted array of product categories for products that are for sale
-    @categories = []
-    @products.each do |product|
-      unless @categories.include?(product.category)
-        @categories << product.category
-      end
-    end
-    @categories = @categories.sort_by { |word| word.downcase }
-  end
+  #   @categories = []
+  #   @products.each do |product|
+  #     unless @categories.include?(product.category)
+  #       @categories << product.category
+  #     end
+  #   end
+  #   @categories = @categories.sort_by { |word| word.downcase }
+  # end
 
-  def wanted
-    @products = Product.where(for_sale: false)
-  end
+  # def wanted
+  #   @products = Product.where(for_sale: false)
+  # end
 
 end

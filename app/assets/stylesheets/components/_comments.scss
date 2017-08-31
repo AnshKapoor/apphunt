@@ -3,20 +3,24 @@
 }
 .comments-container {
   height: auto;
-  width: 100%;
   text-align: left;
+  padding-left: 90px;
+  h3 {
+    font-size: 23px !important;
+    margin-top: 5px;
+  }
 }
 .comment-container {
   margin-bottom: 30px;
-}
-.comment-details {
-  display: flex;
-  align-items: center;
+  img {
+    vertical-align: bottom;
+  }
   li p {
     margin: 0;
     font-size: 15px;
   }
 }
 .comment-content {
-
+  margin-left: 20px !important;
 }
+

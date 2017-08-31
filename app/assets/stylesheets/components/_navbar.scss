@@ -15,11 +15,20 @@
 }
 .navbar-title {
   margin: auto 0;
+  text-decoration: none;
+  color: white;
+}
+.navbar-title:hover {
+  text-decoration: none !important;
+  color: white;
 }
 
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
+}
+.navbar-wagon-brand:hover {
+  text-decoration: none;
 }
 
 /* User Avatar */
