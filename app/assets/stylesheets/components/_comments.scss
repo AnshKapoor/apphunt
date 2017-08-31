@@ -1,0 +1,22 @@
+.comments-button {
+  padding-right: 20px;
+}
+.comments-container {
+  height: auto;
+  width: 100%;
+  text-align: left;
+}
+.comment-container {
+  margin-bottom: 30px;
+}
+.comment-details {
+  display: flex;
+  align-items: center;
+  li p {
+    margin: 0;
+    font-size: 15px;
+  }
+}
+.comment-content {
+
+}

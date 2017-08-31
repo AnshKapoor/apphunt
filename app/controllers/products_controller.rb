@@ -2,14 +2,16 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
 
+    # Gathering categories
     @categories_array = []
     @products.each do |product|
       unless @categories_array.include?(product.category)
         @categories_array << product.category
       end
     end
-
     @categories = @categories_array.to_json
+
+    return @products
   end
 
   def show
@@ -36,6 +38,7 @@ class ProductsController < ApplicationController
     else
       render :index
     end
+
   end
 
 

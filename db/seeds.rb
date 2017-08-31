@@ -1,50 +1,69 @@
 puts 'Cleaning up database...'
+Comment.destroy_all
 Product.destroy_all
 User.destroy_all
 
 
 puts 'Creating users...'
 john = User.create!(
+  first_name: "John",
+  last_name: "Lennon",
   email: 'john@beatles.com',
   password: '12345678',
   avatar_url: 'lennon-avatar.jpg'
 )
 paul = User.create!(
+  first_name: "Paul",
+  last_name: "McCartney",
   email: 'paul@beatles.com',
   password: '12345678',
   avatar_url: 'http://beatlesthe.free.fr/img/paul.jpg'
 )
 ringo = User.create!(
+  first_name: "Ringo",
+  last_name: "Beatles",
   email: 'ringo@beatles.com',
   password: '12345678',
   avatar_url: ''
 )
 george = User.create!(
+  first_name: "George",
+  last_name: "Beatles",
   email: 'george@beatles.com',
   password: '12345678',
   avatar_url: ''
 )
 charlie = User.create!(
+  first_name: "Charlie",
+  last_name: "Jeppsson",
   email: 'charlie.jeppsson1@gmail.com',
   password: '12345678',
   avatar_url: 'avatar-charlie.jpg'
 )
 donald = User.create!(
+  first_name: "Donald",
+  last_name: "Trump",
   email: 'donald@trump.com',
   password: '12345678',
   avatar_url: 'donald-avatar.jpg'
 )
 jon = User.create!(
+  first_name: "Jon",
+  last_name: "Snow",
   email: 'jon@snow.com',
   password: '12345678',
   avatar_url: 'jon-snow-avatar.jpg'
 )
 mark = User.create!(
+  first_name: "Mark",
+  last_name: "Zuckerberg",
   email: 'mark@zuckerberg.com',
   password: '12345678',
   avatar_url: 'zuckerberg-avatar.jpg'
 )
 elon = User.create!(
+  first_name: "Elon",
+  last_name: "Musk",
   email: 'elon@musk.com',
   password: '12345678',
   avatar_url: 'elon-avatar.jpg'
@@ -171,5 +190,23 @@ mark.upvotes rocket_app
 ringo.upvotes rocket_app
 donald.upvotes rocket_app
 elon.upvotes rocket_app
+
+
+puts 'Creating comments...'
+Comment.create(
+  user_id: User.where(first_name: "John").first.id,
+  product_id: Product.where(name: "InLine").first.id,
+  content: "Hey man rad product, I hate waiting in lines!"
+)
+Comment.create(
+  user_id: User.where(first_name: "John").first.id,
+  product_id: Product.where(name: "InLine").first.id,
+  content: "Can I buy it for $1000?"
+)
+Comment.create(
+  user_id: User.where(first_name: "Charlie").first.id,
+  product_id: Product.where(name: "InLine").first.id,
+  content: "Sorry man I already sold it :("
+)
 
 puts 'Finished!'

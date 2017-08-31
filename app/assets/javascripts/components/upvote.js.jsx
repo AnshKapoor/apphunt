@@ -8,7 +8,7 @@ var Upvote = React.createClass({
   render: function() {
     var divClasses = classNames({
       "product-upvote": true,
-      "product-upvote-upvoted": this.state.product.up_voted
+      "product-upvote-upvoted": this.state.product.up_voted // true/false depending on upvoted or not
     });
 
     return (

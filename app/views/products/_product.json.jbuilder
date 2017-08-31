@@ -17,7 +17,7 @@ end
 # Adding comment data to the JSON product object
 json.comments do
   json.array! product.comments do |comment|
-    json.extract! comment, :id, :content, :created_at
-    json.extract! comment.user, :avatar_url
+    json.extract! comment, :id, :content, :time_stamp_formatted
+    json.extract! comment.user, :avatar_url, :first_name
   end
 end
