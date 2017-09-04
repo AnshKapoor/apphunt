@@ -5,7 +5,7 @@ var ProductListItem = React.createClass({
     };
 
     if (this.props.product.comments.length > 1) {
-      var commentListComponent = <CommentList comments={this.props.product.comments} />;
+      var commentListComponent = <CommentList product={this.props.product} />;
     };
 
     return (

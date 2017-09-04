@@ -17,7 +17,6 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    # render(template: '../views/products/index.json.jbuilder', locals: {products: @products.to_json})
   end
 
   def search
@@ -41,7 +40,10 @@ class ProductsController < ApplicationController
   end
 
   def post_comment
-    @comment = Comment.new(user_id: params[:user.id], product_id: params[:product.id], content: params[:content])
+    content = params[:content]
+    @product = Product.find(params[:id])
+    # @comment = Comment.create(user_id: current_user.id, product_id: @product.id, content: "New comment")
+    @comment = Comment.new(user_id: current_user.id, product_id: @product.id, content: content)
   end
 
 

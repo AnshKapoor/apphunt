@@ -6,6 +6,6 @@ JsRoutes.setup do |config|
   #       before restarting your `rails s`.
   config.include = [
     /^upvote_product$/,
-    /^post_comment$/
+    /^post_comment_product$/
   ]
 end

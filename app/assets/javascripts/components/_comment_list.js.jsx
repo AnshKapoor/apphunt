@@ -1,19 +1,45 @@
 var CommentList = React.createClass({
 
+  getInitialState: function() {
+    return {
+      product: this.props.product.comments
+    }
+  },
+
+  postComment: function() {
+    // var content = React.findDOMNode(this.refs.commentInput).value.trim();
+    // console.log(content);
+
+    // Store this (the upvote component) in a variable so that it can be called upon
+    // success in the ajax callback. Else this will refer to the AJAX call itself.
+    var that = this;
+    // AJAX request to store the comment
+    $.ajax({
+      type: 'POST',
+      url: Routes.post_comment_product_path(this.props.product.id)+"?content=Test comment",
+      dataType: 'json',
+      success: function(data) {
+        that.setState({ product: data });
+      }
+    });
+
+    console.log(this.props.product);
+  },
+
+
   render: function() {
     return (
       <div className="comments-container">
         <h3>Comments</h3>
-        {this.props.comments.map(function(comment){
-          console.log(comment);
+        {this.props.product.comments.map(function(comment){
           return <Comment comment={comment} key={comment.id} />;
         })}
         <div>
-          <form ref="comment-form" acceptCharset="UTF-8" method="post" className="comment-form">
-            <p>
-              <input ref="comment-input" type="text" name="comment-input" placeholder="Write new comment here" className="comment-input form-control"/>
-            </p>
-          </form>
+
+
+          <div onClick={this.postComment}>
+            <div className="product-arrow"></div>
+          </div>
         </div>
       </div>
     );
