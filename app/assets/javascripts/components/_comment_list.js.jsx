@@ -13,10 +13,15 @@ var CommentList = React.createClass({
     // Store this (the upvote component) in a variable so that it can be called upon
     // success in the ajax callback. Else this will refer to the AJAX call itself.
     var that = this;
+    var test_content = "Test";
     // AJAX request to store the comment
     $.ajax({
       type: 'POST',
-      url: Routes.post_comment_product_path(this.props.product.id)+"?content=Test comment",
+      // url: Routes.post_comment_product_path(this.props.product.id)+"?content=Test comment",
+      url: Routes.post_comment_product_path({
+        product_id: this.props.product.id,
+        content: test_content
+      }),
       dataType: 'json',
       success: function(data) {
         that.setState({ product: data });

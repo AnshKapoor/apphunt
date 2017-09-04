@@ -40,10 +40,10 @@ class ProductsController < ApplicationController
   end
 
   def post_comment
+    @product = Product.find(params[:product_id])
     content = params[:content]
-    @product = Product.find(params[:id])
-    # @comment = Comment.create(user_id: current_user.id, product_id: @product.id, content: "New comment")
-    @comment = Comment.new(user_id: current_user.id, product_id: @product.id, content: content)
+
+    @comment = Comment.create(product_id: @product.id, content: content, user_id: current_user.id)
   end
 
 
