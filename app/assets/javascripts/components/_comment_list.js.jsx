@@ -8,6 +8,13 @@ var CommentList = React.createClass({
           console.log(comment);
           return <Comment comment={comment} key={comment.id} />;
         })}
+        <div>
+          <form ref="comment-form" acceptCharset="UTF-8" method="post" className="comment-form">
+            <p>
+              <input ref="comment-input" type="text" name="comment-input" placeholder="Write new comment here" className="comment-input form-control"/>
+            </p>
+          </form>
+        </div>
       </div>
     );
   },

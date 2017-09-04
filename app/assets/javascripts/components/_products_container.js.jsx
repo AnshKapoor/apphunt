@@ -34,7 +34,7 @@ var ProductsContainer = React.createClass({
       });
     }
     else {
-      this.fetchProducts();
+      this.fetchProducts(); // Add interval here to check for new comments every second?
     }
 
   },

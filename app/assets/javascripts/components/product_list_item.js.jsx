@@ -15,7 +15,7 @@ var ProductListItem = React.createClass({
             <Upvote product={this.props.product}/>
           </div>
           <div className="show-comments">
-            <div className="comments-button" onClick={this.toggleCommentList}> {/* make this return comment component instead */}
+            <div className="comments-button" onClick={this.toggleCommentList}> {/* make this return comment component */}
               <i className="fa fa-commenting"></i>
             </div>
 
