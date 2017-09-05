@@ -1,11 +1,27 @@
 var ProductListItem = React.createClass({
+
+  // if (this.props.product.comments.length > 1) {
+  //   var commentListComponent = <CommentList product={this.props.product} />;
+  // };
+
+  getInitialState: function() {
+    return { showCommentList: false };
+  },
+  toggleCommentList: function() {
+    this.state.showCommentList ? this.setState({ showCommentList: false }) : this.setState({ showCommentList: true });
+  },
+  // render: function() {
+  //     return (
+  //         <div>
+  //             <input type="submit" value="Search" onClick={this.onClick} />
+  //             { this.state.showCommentList ? <Results /> : null }
+  //         </div>
+  //     );
+  // }
+
   render: function() {
     if (this.props.product.tagline != null) {
       var tagline = " - " + this.props.product.tagline;
-    };
-
-    if (this.props.product.comments.length > 1) {
-      var commentListComponent = <CommentList product={this.props.product} />;
     };
 
     return (
@@ -36,10 +52,11 @@ var ProductListItem = React.createClass({
           </div>
         </div>
         <div>
-          {commentListComponent}
+          {/* {commentListComponent} */}
+          { this.state.showCommentList ? <CommentList product={this.props.product} /> : null }
         </div>
       </div>
     );
-  },
+  }
 
 });
