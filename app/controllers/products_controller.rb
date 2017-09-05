@@ -19,6 +19,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  # Searching for products
   def search
     @products = Product.search(params[:query])
     if request.xhr? # i.e. "if AJAX request"
@@ -28,6 +29,7 @@ class ProductsController < ApplicationController
     end
   end
 
+  # Upvoting products
   def upvote
     @product = Product.find(params[:id])
     if current_user.voted_for? @product
@@ -37,6 +39,9 @@ class ProductsController < ApplicationController
     end
   end
 
+  # Posting new comments (called from React Comment component),
+  # parsing json file with jbuilder, then sent back to the component,
+  # rendering real-time
   def post_comment
     @product = Product.find(params[:product_id])
     @comment = Comment.create(
@@ -45,29 +50,5 @@ class ProductsController < ApplicationController
       user_id: current_user.id
     )
   end
-
-
-
-  # def for_sale
-    # For search function for products that are for sale
-    # if params.has_key?(:search_value) and params[:search_value] != ""
-    #   @products = Product.where(for_sale: true).product_search(params[:search_value])
-    # else
-    #  @products = Product.where(for_sale: true)
-    # end
-
-    # For sorted array of product categories for products that are for sale
-  #   @categories = []
-  #   @products.each do |product|
-  #     unless @categories.include?(product.category)
-  #       @categories << product.category
-  #     end
-  #   end
-  #   @categories = @categories.sort_by { |word| word.downcase }
-  # end
-
-  # def wanted
-  #   @products = Product.where(for_sale: false)
-  # end
 
 end

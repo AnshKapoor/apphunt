@@ -225,7 +225,7 @@ Comment.create(
 Comment.create(
   user_id: User.where(first_name: "Elon").first.id,
   product_id: Product.where(name: "US/Mexico firewall").first.id,
-  content: "Donald you suck"
+  content: "Donald what a bad idea"
 )
 Comment.create(
   user_id: User.where(first_name: "Donald").first.id,

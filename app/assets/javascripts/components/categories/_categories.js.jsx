@@ -22,6 +22,7 @@ var Categories = React.createClass({
           <div className="row">
             <div className="col-xs-12">
               <ul className="category-list">
+                {/* Render buttons for filtering search results on product category */}
                 {categories.map(function(category, index){
                   return <Category category={category} key={index} searchPath={searchPath} submitPath={submitPath}/>;
                 })}
