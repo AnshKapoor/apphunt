@@ -9,6 +9,31 @@
   width: 50px;
   border-radius: 50%;
 }
+.product-badges {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
+}
+.product-badge {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-size: 12px;
+    margin: 0;
+  }
+}
+.for-sale-badge {
+  background-color: $green;
+}
+.wanted-badge {
+  background-color: $red;
+}
 
 /* Body design */
 .product-body {

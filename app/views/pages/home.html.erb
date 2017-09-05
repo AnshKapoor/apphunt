@@ -7,26 +7,31 @@
       </div>
     </div>
     <div class="row home-row">
-      <!-- List of most upvoted apps for sale -->
-      <div class="col-xs-4 col-xs-offset-1 home-product-list-wrapper">
-        <h2 class="list-title">Hottest apps for sale</h2>
-        <div class="container home-product-list">
-          <div class="row">
-            <div class="col-xs-12">
-              <%= react_component 'ForSaleList',
-                render(template: 'products/index.json.jbuilder') %>
+      <div class="col-xs-6">
+        <!-- List of most upvoted apps for sale -->
+        <div class="col-xs-10 col-xs-offset-1 home-product-list-wrapper">
+          <h2 class="list-title">Hottest apps for sale</h2>
+          <div class="container home-product-list">
+            <div class="row">
+              <div class="col-xs-12">
+                <%= react_component 'ForSaleList',
+                  render(template: 'products/index.json.jbuilder') %>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- List of most upvoted apps wanted -->
-      <div class="col-xs-4 col-xs-offset-2 home-product-list-wrapper">
-        <h2 class="list-title">Hottest apps wanted</h2>
-        <div class="container home-product-list">
-          <div class="row">
-            <div class="col-xs-12">
-              <%= react_component 'WantedList',
-                render(template: 'products/index.json.jbuilder') %>
+
+      <div class="col-xs-6">
+        <!-- List of most upvoted apps wanted -->
+        <div class="col-xs-10 col-xs-offset-1 home-product-list-wrapper">
+          <h2 class="list-title">Hottest apps wanted</h2>
+          <div class="container home-product-list">
+            <div class="row">
+              <div class="col-xs-12">
+                <%= react_component 'WantedList',
+                  render(template: 'products/index.json.jbuilder') %>
+              </div>
             </div>
           </div>
         </div>

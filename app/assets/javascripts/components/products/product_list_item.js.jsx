@@ -5,6 +5,7 @@ var ProductListItem = React.createClass({
   },
   toggleCommentList: function() {
     this.state.showCommentList ? this.setState({ showCommentList: false }) : this.setState({ showCommentList: true });
+    console.log(this.props.path);
   },
 
   render: function() {
@@ -34,11 +35,18 @@ var ProductListItem = React.createClass({
             </h3>
             <p className="product-description">{this.props.product.description}</p>
           </div>
-          <div className="product-controls">
-            <div className="product-control">
-              <div className="user-badge-container ">
-                <Img src={this.props.product.user.avatar_url} className="avatar"/>
+          <div className="product-badges">
+            {this.props.product.for_sale ? (
+              <div className="product-badge for-sale-badge">
+                <p>For sale</p>
               </div>
+            ) : (
+              <div className="product-badge wanted-badge">
+                <p>Wanted</p>
+              </div>
+            )}
+            <div>
+              <Img src={this.props.product.user.avatar_url} className="product-badge"/>
             </div>
           </div>
         </div>

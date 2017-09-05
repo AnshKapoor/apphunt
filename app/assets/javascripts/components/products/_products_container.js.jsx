@@ -69,7 +69,7 @@ var ProductsContainer = React.createClass({
             <Categories products={this.props.products} searchPath={this.props.searchPath} submitPath={this.searchProducts}/>
             {/* List of search results --> */}
             <div className="col-xs-7 col-xs-offset-1 home-product-list-wrapper">
-              <h2 className="list-title">Hottest apps for sale right now</h2>
+              <h2 className="list-title">Hottest apps right now</h2>
               <div className="container home-product-list">
                 <div className="row">
                   <div className="col-xs-12">
