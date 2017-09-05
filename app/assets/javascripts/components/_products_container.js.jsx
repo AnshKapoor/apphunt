@@ -19,6 +19,7 @@ var ProductsContainer = React.createClass({
   },
 
   searchProducts(event) {
+    event.preventDefault();
     if (event.target.value) {
       $.ajax({
         // Sending the AJAX search query request to the search function in products_controller (to searchkick)
@@ -65,7 +66,7 @@ var ProductsContainer = React.createClass({
 
           <div className="row home-row">
             {/* List of product categories */}
-            <Categories products={this.props.products}/>
+            <Categories products={this.props.products} searchPath={this.props.searchPath} submitPath={this.searchProducts}/>
             {/* List of search results --> */}
             <div className="col-xs-7 col-xs-offset-1 home-product-list-wrapper">
               <h2 className="list-title">Hottest apps for sale right now</h2>

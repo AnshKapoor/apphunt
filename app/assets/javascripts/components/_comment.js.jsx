@@ -8,12 +8,12 @@ var Comment = React.createClass({
           </li>
           <li className="comment-info">
             <p>{this.props.comment.first_name} at</p>
-            <p>{this.props.comment.time_stamp_formatted}</p>
-          </li>
-          <li>
-            <p className="comment-content">- {this.props.comment.content}</p>
+            <p>{this.props.comment.time_stamp_formatted}:</p>
           </li>
         </ul>
+
+        <p className="comment-content">{this.props.comment.content}</p>
+
       </div>
     );
   }

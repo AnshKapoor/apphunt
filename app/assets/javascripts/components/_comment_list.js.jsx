@@ -37,8 +37,8 @@ var CommentList = React.createClass({
         <div>
           <form acceptCharset="UTF-8" className="comment-form">
             <div className="form-group">
-              <input ref="content" name="content" type="text" placeholder="Write new comment here" className="comment-input form-control"/>
-              <input className="btn btn-success" onClick={this.postComment} type="submit" value="Post comment" />
+              <textarea ref="content" name="content" type="text" placeholder="Write new comment here" className="comment-input form-text form-control"></textarea>
+              <input className="btn post-comment-btn" onClick={this.postComment} type="submit" value="Post comment" />
             </div>
           </form>
         </div>
