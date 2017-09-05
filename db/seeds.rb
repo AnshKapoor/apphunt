@@ -93,7 +93,7 @@ tunebook_app = Product.create!(
 )
 sgt_popper_app = Product.create!(
   name: 'Sgt Popper',
-  tagline: 'Think Spotify, but for Sgt Pepper on repeat!',
+  tagline: 'Think Spotify, but for Sgt Pepper',
   description: 'Subscription music streaming service, powered by Node, React, MongoDB, and many more cutting-edge technologies...',
   category: 'Music',
   user: john,
@@ -213,7 +213,7 @@ Comment.create(
 Comment.create(
   user_id: User.where(first_name: "Donald").first.id,
   product_id: Product.where(name: "App that helps me recruit soldiers to fight the white walkers").first.id,
-  content: "Hey Jon good luck with creating an app, you're like living in midieval times"
+  content: "Hey Jon good luck with creating an app, you're like living in medieval times"
 )
 Comment.create(
   user_id: User.where(first_name: "Jon").first.id,

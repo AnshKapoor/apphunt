@@ -8,7 +8,7 @@ var CommentList = React.createClass({
     event.preventDefault();
     var test_content = this.refs.content.value;
 
-    // AJAX request to store the comment
+    // AJAX request to store the comment in the db
     $.ajax({
       type: 'POST',
       url: Routes.post_comment_product_path({
@@ -25,7 +25,6 @@ var CommentList = React.createClass({
     // Clear input field
     this.refs.content.value = '';
     this.refs.content.focus();
-
   },
 
   render: function() {

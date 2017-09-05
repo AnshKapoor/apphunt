@@ -1,23 +1,11 @@
 var ProductListItem = React.createClass({
 
-  // if (this.props.product.comments.length > 1) {
-  //   var commentListComponent = <CommentList product={this.props.product} />;
-  // };
-
   getInitialState: function() {
     return { showCommentList: false };
   },
   toggleCommentList: function() {
     this.state.showCommentList ? this.setState({ showCommentList: false }) : this.setState({ showCommentList: true });
   },
-  // render: function() {
-  //     return (
-  //         <div>
-  //             <input type="submit" value="Search" onClick={this.onClick} />
-  //             { this.state.showCommentList ? <Results /> : null }
-  //         </div>
-  //     );
-  // }
 
   render: function() {
     if (this.props.product.tagline != null) {
@@ -27,16 +15,19 @@ var ProductListItem = React.createClass({
     return (
       <div>
         <div className="product">
-          <div>
+          <div className="product-controls">
             <Upvote product={this.props.product}/>
-          </div>
-          <div className="show-comments">
-            <div className="comments-button" onClick={this.toggleCommentList}> {/* make this return comment component */}
-              <i className="fa fa-commenting"></i>
-            </div>
 
-            {/* <CommentList product={this.props.product}/> */}
+            <div className="comment-controls" onClick={this.toggleCommentList}>
+              <div className="comments-button">
+                <i className="fa fa-commenting"></i>
+              </div>
+              <div className="comments-count">
+                {this.props.product.comments.length}
+              </div>
+            </div>
           </div>
+
           <div className="product-body">
             <h3>
               <p><a href={this.props.product.url} target="_blank">{this.props.product.name}</a>{tagline}</p>
@@ -52,7 +43,6 @@ var ProductListItem = React.createClass({
           </div>
         </div>
         <div>
-          {/* {commentListComponent} */}
           { this.state.showCommentList ? <CommentList product={this.props.product} /> : null }
         </div>
       </div>

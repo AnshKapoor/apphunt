@@ -23,8 +23,6 @@ class ProductsController < ApplicationController
     @products = Product.search(params[:query])
     if request.xhr? # i.e. "if AJAX request"
       @products
-      # render :json => @products.to_json
-      # render(template: '../views/products/index.json.jbuilder', :json => @products)
     else
       render :index
     end
@@ -41,9 +39,11 @@ class ProductsController < ApplicationController
 
   def post_comment
     @product = Product.find(params[:product_id])
-    content = params[:content]
-
-    @comment = Comment.create(product_id: @product.id, content: content, user_id: current_user.id)
+    @comment = Comment.create(
+      product_id: @product.id,
+      content: params[:content],
+      user_id: current_user.id
+    )
   end
 
 

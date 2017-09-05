@@ -57,7 +57,7 @@
   }
 }
 .product-count {
-  margin: 2px 0 0;
+  margin: 4px 0 0;
   color: white !important;
 }
 .product-arrow {
@@ -66,11 +66,40 @@
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-top: 8px solid transparent;
-  border-bottom: 10px solid #78BD27 !important;
+  // border-top: 8px solid transparent;
+  border-bottom: 10px solid $green !important;
   border-radius: 2px;
   margin: auto;
 }
+
+// Comment control design
+.comment-controls {
+  padding-right: 30px;
+  text-align: center;
+  transition: all 0.15s ease;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+
+}
+.comment-controls:hover {
+
+}
+.comments-count {
+  margin: 0;
+  padding-bottom: 10px;
+  color: white !important;
+  p {
+    margin: 15px 0 0 0;
+  }
+}
+.comments-button {
+  padding-top: 5px;
+  i {
+    color: white;
+  }
+}
+
 
 /* Controls design */
 .product-controls {
