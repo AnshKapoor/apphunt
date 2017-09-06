@@ -6,14 +6,14 @@ var CommentList = React.createClass({
 
   postComment(event) {
     event.preventDefault();
-    var test_content = this.refs.content.value;
+    var content = this.refs.content.value;
 
     // AJAX request to store the comment in the db
     $.ajax({
       type: 'POST',
       url: Routes.post_comment_product_path({
         product_id: this.props.product.id,
-        content: test_content
+        content: encodeURIComponent(content) // Encode to allow special characters
       }),
       dataType: 'json',
       success: function(data) {
