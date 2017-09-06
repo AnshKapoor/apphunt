@@ -17,7 +17,7 @@ var CommentList = React.createClass({
       }),
       dataType: 'json',
       success: function(data) {
-        console.log(data.comments);
+        console.log(data);
         this.setState({ product: data });
       }.bind(this)
     });
@@ -29,13 +29,11 @@ var CommentList = React.createClass({
 
   render: function() {
 
-    var comments = [];
-    this.state.product.comments.map(function(comment){
-      if (comments.includes(comments) == false) {
-        comments.push(comment);
-      }
+    // Order comment list by time created at (id)
+    var comments = this.state.product.comments;
+    comments.sort(function(a, b) {
+      return a.id > b.id ? -1 : a.id < b.id ? 1 : 0;
     });
-    var comments = comments.reverse();
 
     return (
       <div className="comments-container">

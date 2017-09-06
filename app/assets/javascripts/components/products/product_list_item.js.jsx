@@ -5,7 +5,6 @@ var ProductListItem = React.createClass({
   },
   toggleCommentList: function() {
     this.state.showCommentList ? this.setState({ showCommentList: false }) : this.setState({ showCommentList: true });
-    console.log(this.props.path);
   },
 
   render: function() {
