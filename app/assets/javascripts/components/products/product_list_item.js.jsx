@@ -36,7 +36,7 @@ var ProductListItem = React.createClass({
           </div>
           <div className="product-badges">
             {this.props.product.for_sale ? (
-              <div className="product-badge for-sale-badge">
+              <div className="product-badge for-sale-badge hidden-xs hidden-sm">
                 <p>For sale</p>
               </div>
             ) : (

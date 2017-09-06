@@ -16,7 +16,7 @@ var Categories = React.createClass({
     var submitPath = this.props.submitPath;
 
     return (
-      <div className="col-xs-2 col-xs-offset-1 home-product-list-wrapper">
+      <div className="col-md-2 col-md-offset-1 home-product-list-wrapper visible-lg">
         <h2 className="list-title">Categories</h2>
         <div className="container home-product-list">
           <div className="row">

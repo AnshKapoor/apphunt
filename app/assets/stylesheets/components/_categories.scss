@@ -1,6 +1,10 @@
 .category-list li {
   text-align: left;
   color: $purple;
+  input {
+    width: 100%;
+    text-align: left;
+  }
 }
 .category-search li input {
   -webkit-appearance: none;
