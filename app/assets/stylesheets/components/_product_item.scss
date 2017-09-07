@@ -49,6 +49,7 @@
 .product-body {
   flex: 1 1 auto;
   text-align: left;
+  padding-left: 0;
 }
 .product-avatar {
   text-align: right;
@@ -69,6 +70,9 @@
   text-decoration: none;
   color: white;
   font-weight: bold;
+}
+.product-description-wrapper {
+  padding-left: 0;
 }
 .product-description {
   font-size: 15px !important;

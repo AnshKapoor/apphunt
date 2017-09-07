@@ -43,7 +43,7 @@ var ProductListItem = React.createClass({
           </div>
           <div className="row product-comp-row">
             {/* Product description */}
-            <div className="col-xs-10 col-lg-8">
+            <div className="col-xs-10 col-lg-8 product-description-wrapper">
               <p className="product-description">{this.props.product.description}</p>
             </div>
             {/* Product upvote and comment controls */}

@@ -30,17 +30,34 @@
   display: inline-block;
   border-bottom: 8px solid #550F93;
 }
-.home-title {
+// Home page top section for viewport sizes md and lg
+.home-title-high {
   font-size: 70px;
   color: #550F93;
   margin-bottom: 0;
+  margin-top: 10px;
   font-weight: bold;
 }
-.home-tagline {
+.home-tagline-high {
   font-size: 24px;
   color: black;
   margin-top: 0;
-  margin-bottom: 350px;
+  margin-bottom: 50px;
+}
+
+// Home page top section for viewport sizes xs and sm
+.home-title-low {
+  font-size: 70px;
+  color: #550F93;
+  margin-bottom: 0;
+  margin-top: 180px;
+  font-weight: bold;
+}
+.home-tagline-low {
+  font-size: 24px;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 180px;
 }
 .home-product-list-wrapper {
   background-color: rgba(0, 0, 0, 0.6);
