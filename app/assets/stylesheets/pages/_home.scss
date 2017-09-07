@@ -127,3 +127,16 @@
 .home-search-input:focus  {
   border: 1px solid #CCCCCC;
 }
+
+.search-page-link {
+  margin-bottom: 200px;
+  font-size: 30px;
+  font-family: $headers-font;
+  background-color: $green;
+  color: white;
+}
+.search-page-link:hover {
+  text-decoration: none;
+  background-color: $dark-green;
+  color: white;
+}

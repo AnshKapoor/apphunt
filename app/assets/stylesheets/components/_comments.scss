@@ -37,6 +37,11 @@
   color: white;
   margin-top: 10px;
 }
+.post-comment-btn:hover {
+  background-color: $dark-green;
+  text-decoration: none;
+  color: white;
+}
 .post-comment-form {
   margin: 20px 0 20px 0;
 }
