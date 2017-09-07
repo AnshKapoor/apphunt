@@ -1,6 +1,7 @@
 // CSS for home page
 .home-wrapper {
   height: auto;
+  width: 100vw;
   margin: 0;
   padding: 0;
 }
@@ -9,12 +10,10 @@
   image-url('apphunt-home.jpeg');
   background-position: top left;
   background-attachment: fixed;
-  background-size: calc(100vw - 150px) 100vh;
+  background-size: cover;
   color: white;
   text-align: center;
   height: auto;
-  width: 100vw !important;
-  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   position: relative;
