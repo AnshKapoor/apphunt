@@ -6,6 +6,7 @@
   border-radius: 3px;
   transition: all 0.15s ease;
   padding: 15px;
+  width: 100%;
 }
 .product-comp-row {
   height: auto;
@@ -27,8 +28,9 @@
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  // margin-left: 20px;
   display: flex;
+  // margin: 0 20px 10px 20px;
+  margin: auto;
   align-items: center;
   justify-content: center;
   p {
@@ -49,9 +51,9 @@
   text-align: left;
 }
 .product-avatar {
-  flex: 1 1 auto;
   text-align: right;
   padding: 0;
+  margin: 0;
 }
 .product-body h3 {
   font-weight: bold;
@@ -83,7 +85,7 @@
 
 /* Upvote design */
 .product-upvote {
-  padding-right: 20px;
+  // padding-right: 20px;
   text-align: center;
   transition: all 0.15s ease;
   font-weight: bold;
@@ -113,13 +115,11 @@
 
 // Comment control design
 .comment-controls {
-  padding-right: 30px;
   text-align: center;
   transition: all 0.15s ease;
   font-weight: bold;
   font-size: 13px;
   line-height: 20px;
-  padding: 0;
 }
 .comment-controls:hover {
 

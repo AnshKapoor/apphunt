@@ -5,7 +5,6 @@ var ForSaleList = React.createClass({
       <div>
         {this.props.products.map(function(product) {
           if (product.for_sale == true) {
-
             return <ProductListItem product={product} key={product.id} />;
           }
         })}
