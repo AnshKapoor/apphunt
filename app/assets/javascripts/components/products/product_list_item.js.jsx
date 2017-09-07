@@ -48,7 +48,7 @@ var ProductListItem = React.createClass({
             </div>
             {/* Product upvote and comment controls */}
             <div className="product-controls col-xs-2 col-lg-4">
-              <div className="col-xs-6">
+              <div className="col-xs-6 product-controls-pair">
                 <Upvote product={this.props.product}/>
               </div>
               <div className="comment-controls col-xs-6" onClick={this.toggleCommentList}>
