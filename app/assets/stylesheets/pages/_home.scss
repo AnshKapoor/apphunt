@@ -44,7 +44,7 @@
   font-size: 70px;
   color: #550F93;
   margin-bottom: 0;
-  margin-top: 10px;
+  margin-top: 80px;
   font-weight: bold;
 }
 .home-tagline-high {
@@ -77,8 +77,8 @@
   padding-bottom: 0 0 25px 0;
 }
 .home-product-list {
-  // width: 100vw;
   padding: 0;
+  width: 100%;
 }
 
 .home-banner-logo {
@@ -106,7 +106,8 @@
   font-family: $headers-font;
   background-color: $green;
   color: white;
-  width: 100%;
+  width: auto;
+  margin: auto;
 }
 .search-page-link:hover {
   text-decoration: none;
