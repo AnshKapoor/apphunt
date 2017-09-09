@@ -6,24 +6,33 @@
   padding: 0;
 }
 .home-banner {
-  background-image: linear-gradient(-225deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.0) 50%),
-  image-url('apphunt-home.jpeg');
-  background-position: top left;
-  background-attachment: fixed;
-  background-size: cover;
+  height: auto;
+  width: 100vw;
   color: white;
   text-align: center;
-  height: auto;
-  background-repeat: no-repeat;
   display: flex;
   position: relative;
   align-items: center;
   flex-direction: column;
-  padding-top: 70px;
+  margin: 0;
+}
+.home-background {
+  background-image: linear-gradient(-225deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.0) 50%),
+  image-url('apphunt-home.jpeg');
+  background-position: top left;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin: 0;
 }
 .home-row {
-  width: 100%;
+  width: 100vw;
 }
 .list-title {
   // text-decoration: underline #550F93;
@@ -50,44 +59,31 @@
   font-size: 70px;
   color: #550F93;
   margin-bottom: 0;
-  margin-top: 180px;
+  margin-top: 270px;
   font-weight: bold;
 }
 .home-tagline-low {
   font-size: 24px;
   color: black;
   margin-top: 0;
-  margin-bottom: 180px;
+  margin-bottom: 140px;
 }
+
+// Other home page classes
 .home-product-list-wrapper {
   background-color: rgba(0, 0, 0, 0.6);
   min-height: 760px;
-  margin-bottom: 200px;
-  padding-bottom: 25px;
+  margin-bottom: 100px;
+  padding-bottom: 0 0 25px 0;
 }
 .home-product-list {
-  width: 100%;
+  // width: 100vw;
   padding: 0;
 }
 
-
-
-// .home-banner-content-wrapper {
-//   height: 600px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: space-between;
-//   justify-content: center;
-//   padding: 0 20px;
-// }
 .home-banner-logo {
   width: 90%;
 }
-// .home-banner-content-wrapper h1 {
-//   font-size: 40px;
-//   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-//   margin-bottom: 20px;
-// }
 .home-banner-bottom a {
   text-decoration: none;
   // color: $lightgray;
@@ -97,46 +93,26 @@
   color: white;
   cursor: pointer;
 }
-
-// Home page line search form
-.home-search {
-  flex: 0 1 300px;
+.search-page-link-wrapper {
+  height: 200px;
+  width: 100vw;
   display: flex;
-  justify-content: center;
-  position: relative;
+  align-items: center;
+  margin-bottom: 100px;
+  // padding: 0 20px;
 }
-.home-search-btn {
-  margin-left: 5px;
-  border: 0;
-}
-.home-search-btn:hover {
-  border: 0;
-}
-.home-search-input {
-  flex: 0 1 400px;
-  transition: all 0.15s ease;
-  line-height: 40px;
-  font-weight: lighter;
-  color: #666666;
-  border: 1px solid #E6E6E6;
-  border-radius: 5px;
-  padding: 0 10px;
-  font-size: 14px;
-  outline: none;
-}
-.home-search-input:focus  {
-  border: 1px solid #CCCCCC;
-}
-
 .search-page-link {
-  margin: 0 20px 200px 20px;
-  font-size: 30px;
+  font-size: 25px;
   font-family: $headers-font;
   background-color: $green;
   color: white;
+  width: 100%;
 }
 .search-page-link:hover {
   text-decoration: none;
   background-color: $dark-green;
   color: white;
+}
+.no-padding {
+  padding: 0;
 }

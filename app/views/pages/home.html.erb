@@ -1,5 +1,6 @@
 <div class="container home-wrapper">
   <div class="home-banner">
+    <div class="home-background"></div>
     <div class="row home-row">
       <div class="col-xs-12 visible-xs visible-sm">
         <h1 class="home-title-low">AppHunt</h1>
@@ -10,7 +11,7 @@
         <h4 class="home-tagline-high">Make money on your code</h4>
       </div>
     </div>
-    <div class="row">
+    <div class="row home-row">
       <div class="col-xs-12 col-lg-6 col-lg-offset-0">
         <!-- List of most upvoted apps for sale -->
         <div class="col-xs-12 col-sm-10 col-sm-offset-1 home-product-list-wrapper">
@@ -33,11 +34,10 @@
         </div>
       </div>
 
-    </div>
-    <div class="row">
-      <div class="col-xs-12">
+      <div class="col-xs-12 search-page-link-wrapper">
         <%= link_to "Find your dream app today", products_path, class: "btn search-page-link" %>
       </div>
+
     </div>
   </div>
 </div>
